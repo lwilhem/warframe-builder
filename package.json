@@ -1,0 +1,21 @@
+{
+  "name": "warframe-builder",
+  "type": "module",
+  "private": true,
+  "packageManager": "bun@1.1.26",
+  "workspaces": [
+    "app",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "check": "turbo check",
+    "build": "turbo build"
+  },
+  "devDependencies": {
+    "@wbuilder/eslint-config": "workspace:*",
+    "eslint": "^9.9.1",
+    "turbo": "^2.1.0"
+  }
+}

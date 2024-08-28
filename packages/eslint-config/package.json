@@ -1,0 +1,19 @@
+{
+  "name": "@wbuilder/eslint-config",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^2.27.3",
+    "eslint-plugin-format": "^0.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "eslint-flat-config-utils": "^0.3.1",
+    "typescript": "^5.5.4",
+    "vue": "latest"
+  }
+}

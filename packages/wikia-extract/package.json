@@ -1,0 +1,13 @@
+{
+  "name": "@wbuilder/wikia-extract",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .--fix",
+    "build": "tsup --minify"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}

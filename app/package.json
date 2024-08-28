@@ -1,0 +1,16 @@
+{
+  "name": "@wbuilder/app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "postinstall": "nuxt prepare",
+    "dev": "nuxt dev -p 3000",
+    "lint": "eslint . --fix",
+    "build": "nuxt build",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "nuxt": "3.13.0",
+    "vue": "latest"
+  }
+}
