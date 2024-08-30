@@ -1,23 +1,18 @@
-import fs from "node:fs"
-import process from "node:process"
+import cheerio from "cheerio"
 
-export default async function fectWikiaPage(url: string) {
+export async function fetchWarframePimaryWeaponsList() {
+  // const primary_weapons: string[] = []
+
   try {
-    const request = await fetch(url, {
-      method: "GET",
-    })
+    const primary_weapons_request = await fetch("https://warframe.fandom.com/wiki/Module:Weapons/data")
+    const primary_weapons_response = await primary_weapons_request.text()
 
-    const response = await request.text()
+    const page = cheerio.load(primary_weapons_response)
 
-    const dump_location = `${process.cwd()}/packages/wikia-extract/dump/dump.txt`
-
-    fs.writeFileSync(dump_location, response)
-
-    console.log(response)
+    return page
   }
   catch (err) {
-    throw new Error(`Error fetching page: ${err}`)
+    console.error("failed to fetch primary weapons list")
+    throw new Error(String(err))
   }
 }
-
-fectWikiaPage("https://warframe.fandom.com/wiki/Wisp")

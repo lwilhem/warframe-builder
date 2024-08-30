@@ -5,6 +5,9 @@
     "lint": "eslint .--fix",
     "build": "tsup --minify"
   },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
   "devDependencies": {
     "@types/node": "^22.5.1",
     "tsup": "^8.2.4",
